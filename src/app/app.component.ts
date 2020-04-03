@@ -3,13 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <img [src]="imagenURL"/>
-    <button [disabled]="botonStatus">Mi boton </button>
+    <button [class.activo]="isActive">mi boton</button>
   `,
-  styles: ['']
+  styles: [
+    `
+      .activo{
+            background: green;
+      }
+    `
+  ]
 })
 export class AppComponent {
-
-  imagenURL = "http://lorempixel.com/400/200/";
-  botonStatus = false;
+  isActive =false;
 }
