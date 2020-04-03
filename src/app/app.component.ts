@@ -3,13 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <button [class.activo]="isActive">mi boton</button>
+    <button [style.borderColor]="isActive ? 'green' : 'white'">mi boton</button>
   `,
   styles: [
     `
-      .activo{
-            background: green;
-      }
+
     `
   ]
 })
